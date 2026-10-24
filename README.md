@@ -24,6 +24,16 @@ cp .env.example .env
 
 `uv run --env-file .env` loads the dev environment explicitly (no auto-loading).
 
+## Logging
+
+The console and `app.log` show only the log message (no timestamp, level or location):
+
+```
+Hello from sb_oct!
+```
+
+Tracebacks of unhandled exceptions are still logged. To change the format, edit `LOG_FORMAT` in `src/sb_oct/app.py` (see [docs/usage.md](docs/usage.md#log-format)).
+
 ## Testing
 
 - Run tests: `uv run pytest`
